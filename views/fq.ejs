@@ -1,0 +1,222 @@
+<% layout('partials/userProfile') %>
+
+        <h1>Faculty Qualification and Faculty Retention</h1>
+        <br>
+
+        <form class="" action="/fqform" method="post">
+
+
+                <h4>CAY (Current Academic Year)</h4>
+
+                <table class="table">
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of regular faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="regularCAY" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of contractual faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="contractualCAY" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular Ph.D. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="phdCAY" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular M.Tech. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="mtechCAY" required>
+                                </td>
+                        </tr>
+
+                </table>
+
+                <hr>
+
+                <h4>CAYm1 (Current Academic Year - 1)</h4>
+
+                <table class="table">
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of regular faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="regularCAYm1" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of contractual faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="contractualCAYm1" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular Ph.D. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="phdCAYm1" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular M.Tech. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="mtechCAYm1" required>
+                                </td>
+                        </tr>
+
+                </table>
+
+                <hr>
+
+                <h4>CAYm2 (Current Academic Year - 2)</h4>
+
+                <table class="table">
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of regular faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="regularCAYm2" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of contractual faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="contractualCAYm2" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular Ph.D. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="phdCAYm2" required>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <p class="lead">Total Number of Regular M.Tech. Faculty</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="mtechCAYm2" required>
+                                </td>
+                        </tr>
+
+                </table>
+
+                <hr>
+
+                <h4>Faculty Retention</h4>
+
+                <table class="table">
+                        <tr>
+                                <td>
+                                        <p class="lead">Total number of regular faculty retained from previous Academic
+                                                Year</p>
+                                </td>
+                                <td>
+                                        <input class="number-field" type="number" name="facultyRetained" required>
+                                </td>
+                        </tr>
+                </table>
+
+                <br>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <br><br>
+
+        </form>
+
+
+        <!-- <label class="form-label">Total number of regular faculty <input type="number" name="regularCAY"
+                                required></label> <br>
+                <label class="form-label">Total number of contractual faculty <input type="number" name="contractualCAY"
+                                required></label><br>
+                <label class="form-label">Total Number of Regular Ph.D Faculty <input type="number" name="phdCAY"
+                                required></label><br>
+                <label class="form-label">Total Number of Regular M. Tech Faculty <input type="number" name="mtechCAY"
+                                required></label> <br> -->
+        <!-- F20 -->
+        <!-- FQ = 2.0 x [(10X +4Y)/F)] -->
+        <!-- % of faculty retained  -->
+        <!-- owner -->
+
+        <!-- <br>
+                <hr>
+                <br>
+
+                <h4>CAYm1 (Current Academic Year minus 1)</h4>
+
+                <label class="form-label">Total number of regular faculty <input type="number" name="regularCAYm1"
+                                required></label> <br>
+                <label class="form-label">Total number of contractual faculty <input type="number"
+                                name="contractualCAYm1" required></label><br>
+                <label class="form-label">Total Number of Regular Ph.D Faculty <input type="number" name="phdCAYm1"
+                                required></label><br>
+                <label class="form-label">Total Number of Regular M. Tech Faculty <input type="number" name="mtechCAYm1"
+                                required></label> <br>
+
+
+                <br>
+                <hr>
+                <br>
+
+
+                <h4>CAYm2 (Current Academic Year minus 2)</h4>
+
+                <label class="form-label">Total number of regular faculty <input type="number" name="regularCAYm2"
+                                required></label> <br>
+                <label class="form-label">Total number of contractual faculty <input type="number"
+                                name="contractualCAYm2" required></label><br>
+                <label class="form-label">Total Number of Regular Ph.D Faculty <input type="number" name="phdCAYm2"
+                                required></label><br>
+                <label class="form-label">Total Number of Regular M. Tech Faculty <input type="number" name="mtechCAYm2"
+                                required></label> <br>
+                <br>
+                <hr>
+                <br>
+
+                <h4>Faculty Retention</h4>
+
+                <label class="form-label">Total number of regular faculty retained from previous Academic Year<input
+                                type="number" name="facultyRetained" required></label> <br><br>
+
+                <div class="row">
+                        <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                </div>
+                <br> -->

@@ -1,0 +1,209 @@
+<% layout('partials/userProfile') %>
+
+  <h1>Student-Faculty Ratio</h1>
+
+  <br>
+
+  <form class="" action="/sfredit?_method=PUT" method="post">
+
+
+    <h4>Students Info</h4>
+
+    <table class="table">
+
+      <tr>
+        <td>
+          <p class="lead">No. of UG Programs in the Department (n)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="UGPrograms" value="<%= sfrInfo[0].UGPrograms %>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of PG Programs in the Department (m)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="PGPrograms" value="<%= sfrInfo[0].PGPrograms %>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of Students in UG 2nd Year</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="u1" value="<%=sfrInfo[0].u1%>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of Students in UG 3rd Year</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="u2" value="<%=sfrInfo[0].u2%>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of Students in UG 4th Year</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="u3" value="<%=sfrInfo[0].u3%>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of Students in PG 1st Year</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="p1" value="<%=sfrInfo[0].p1%>" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">No. of Students in PG 2nd Year</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="p2" value="<%=sfrInfo[0].p2%>" required>
+        </td>
+      </tr>
+
+
+    </table>
+
+
+    <hr>
+
+
+    <h4>Faculty Info</h4>
+
+    <table class="table">
+
+      <tr>
+        <td>
+          <p class="lead">Total Number of Faculty Members (excluding first year faculty)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="totalFacultyCAY" value="<%=sfrInfo[0].totalFacultyCAY%>"
+            required>
+        </td>
+      </tr>
+
+    </table>
+
+
+    <hr>
+
+
+    <h4>Previous Year Info</h4>
+
+    <table class="table">
+
+      <tr>
+        <td>
+          <p class="lead">Total Students (Current Academic Year - 1)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="totalStudentsCAYm1" value="<%=sfrInfo[0].totalStudentsCAYm1%>"
+            required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Total Number of Faculty Members (Current Academic Year - 1)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="totalFacultyCAYm1" value="<%=sfrInfo[0].totalFacultyCAYm1%>"
+            required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Total Students (Current Academic Year - 2)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="totalStudentsCAYm2" value="<%=sfrInfo[0].totalStudentsCAYm2%>"
+            required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Total Number of Faculty Members (Current Academic Year - 2)</p>
+        </td>
+        <td>
+          <input class="number-field" type="number" name="totalFacultyCAYm2" value="<%=sfrInfo[0].totalFacultyCAYm2%>"
+            required>
+        </td>
+      </tr>
+
+    </table>
+
+    <button type="submit" class="btn btn-primary">update</button>
+    <br>
+  </form>
+
+
+
+
+
+  <!-- <h1>Student-Faculty Ratio</h1>
+
+  <form class="" action="/sfredit?_method=PUT" method="post">
+
+
+    <h4>Students Info</h4>
+
+    <label class="form-label">No. of UG Programs in the Department (n) <input type="number" name="UGPrograms"
+        value="<%= sfrInfo[0].UGPrograms %>" required></label>
+    <br>
+    <label class="form-label">No. of PG Programs in the Department (m) <input type="number" name="PGPrograms"
+        value="<%=sfrInfo[0].PGPrograms%>" required></label>
+    <br><br>
+    <label class="form-label">No. of Students in UG 2nd Year <input type="number" name="u1" value="<%=sfrInfo[0].u1%>"
+        required></label> <br>
+    <label class="form-label">No. of Students in UG 3rd Year <input type="number" name="u2" value="<%=sfrInfo[0].u2%>"
+        required></label> <br>
+    <label class="form-label">No. of Students in UG 4th Year <input type="number" name="u3" value="<%=sfrInfo[0].u3%>"
+        required></label> <br>
+    <label class="form-label">No. of Students in PG 1st Year <input type="number" name="p1" value="<%=sfrInfo[0].p1%>"
+        required></label> <br>
+    <label class="form-label">No. of Students in PG 2nd Year <input type="number" name="p2" value="<%=sfrInfo[0].p2%>"
+        required></label> <br><br>
+
+    <hr>
+
+    <h4>Faculty Info</h4>
+
+    <label class="form-label"> Total Number of Faculty Members in the Department (excluding first year faculty)
+      <input type="number" name="totalFaculty" value="<%=sfrInfo[0].totalFacultyCAY%>" required></label> <br>
+
+    <hr>
+
+
+    <h4>Previous Year Info</h4>
+
+    <label class="form-label"> Total Students (Current Academic Year - 1)
+      <input type="number" name="totalStudentsCAYm1" value="<%=sfrInfo[0].totalStudentsCAYm1%>" required></label> <br>
+
+    <label class="form-label"> Total Number of Faculty Members (Current Academic Year - 1)
+      <input type="number" name="totalFacultyCAYm1" value="<%=sfrInfo[0].totalFacultyCAYm1%>" required></label> <br><br>
+
+    <label class="form-label"> Total Students (Current Academic Year - 2)
+      <input type="number" name="totalStudentsCAYm2" value="<%=sfrInfo[0].totalStudentsCAYm2%>" required></label> <br>
+
+    <label class="form-label"> Total Number of Faculty Members (Current Academic Year - 2)
+      <input type="number" name="totalFacultyCAYm2" value="<%=sfrInfo[0].totalFacultyCAYm2%>" required></label> <br>
+
+
+    <button type="submit" class="btn btn-primary">update</button>
+    <br>
+  </form> -->

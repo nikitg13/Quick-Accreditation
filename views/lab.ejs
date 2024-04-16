@@ -1,0 +1,134 @@
+<% layout('partials/userProfile') %>
+
+  <h2>Laboratory Information</h2>
+  <br>
+  <form class="" action="/labform" method="post">
+
+
+    <h4>Adequate and well equipped laboratories, and technical manpower</h4>
+
+    <table class="table">
+      <tr>
+        <td>
+          <p class="lead">Laboratory Name</p>
+        </td>
+        <td>
+          <input class="text-field" type="text" name="name" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Number of Students Per Setup</p>
+        </td>
+        <td>
+          <input class="text-field" type="number" name="numberOfStudent" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Name of the Important Equipment</p>
+        </td>
+        <td>
+          <input class="text-field" type="text" name="nameofEquipments" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Name of the Technical Staff</p>
+        </td>
+        <td>
+          <input class="text-field" type="text" name="nameOfStaff" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Staff Designation</p>
+        </td>
+        <td>
+          <input class="text-field" type="text" name="Designation" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Staff Qualification</p>
+        </td>
+        <td>
+          <input class="text-field" type="text" name="Qualification" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <p class="lead">Weekly Utilization Status</p>
+        </td>
+        <td>
+          <input class="text-field" type="number" name="weeklyStatus" required>
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- <label class="form-label">Laboratory Name <input type="text" name="name" required></label>
+    <br>
+    <label class="form-label">Number of Students per setup <input type="number" name="numberOfStudent" required></label>
+    <br>
+    <label class="form-label">Name of the Important Equipment <input type="textbox" name="nameofEquipments"
+        required></label> <br>
+    <label class="form-label">Name of the Technical Staff <input type="text" name="nameOfStaff" required></label> <br>
+    <label class="form-label">Staff Designation <input type="text" name="Designation" required></label> <br>
+    <label class="form-label">Staff Qualification <input type="text" name="Qualification" required></label> <br>
+    <label class="form-label">Weekly Utilization Status <input type="number" name="weeklyStatus" required></label> -->
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <br>
+
+
+  <table class="table table-light table-bordered">
+    <thead>
+      <tr class="table-secondary">
+        <th scope="col">Name</th>
+        <th scope="col">Number of Student</th>
+        <th scope="col">Name of equipments</th>
+        <th scope="col">Name of Staff</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Qualification</th>
+        <th scope="col">Weekly Status</th>
+      </tr>
+    </thead>
+    <% for(let labs of user.lab){%>
+      <tbody>
+        <tr>
+
+          <td>
+            <%=labs.name %>
+          </td>
+          <td>
+            <%=labs.numberOfStudent%>
+          </td>
+          <td>
+            <%=labs.nameofEquipments%>
+          </td>
+          <td>
+            <%=labs.nameOfStaff %>
+          </td>
+          <td>
+            <%=labs.Designation %>
+          </td>
+          <td>
+            <%=labs.Qualification %>
+          </td>
+          <td>
+            <%=labs.weeklyStatus %>
+          </td>
+        </tr>
+
+      </tbody>
+      <%}%>
+  </table>

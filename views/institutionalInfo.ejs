@@ -1,0 +1,156 @@
+<% layout('partials/userProfile') %>
+
+
+    <div class="container">
+        <div class="row">
+            <div
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+                <h2 style="color: brown;">
+                    <%=institutionalInfo[0].name%>
+                </h2>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Your Profile
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div class=" col-md-9 col-lg-9">
+
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>Institution Name:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].name%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Institution Address:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].address%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Affiliating University:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].university%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Year of establishment:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].estYear%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Type of the Institution:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].institutionalType%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Ownership Status:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].ownershipStatus%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Vision:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].vision%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Mission:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].mission%>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <br>
+                                <hr>
+                                <br>
+
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>Head of the Institution:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].headName%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Head Email:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].headEmail%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Head Contact:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].headContact%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>NBA Coordinator:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].nbaCoordinatorName%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>NBA Coordinator Email:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].nbaCoordinatorEmail%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>NBA Coordinator Contact:</td>
+                                            <td>
+                                                <%=institutionalInfo[0].nbaCoordinatorContact%>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+
+                                <a href="/editprofile" class="btn btn-primary">Edit Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button"
+                            class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button"
+                                class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button"
+                                class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

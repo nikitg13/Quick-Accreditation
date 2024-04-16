@@ -1,0 +1,321 @@
+<% layout('partials/userProfile') %>
+
+  <h1 style="color: brown;">Analysis: <h2>Faculty Information and Contributions</h2>
+  </h1>
+  <br>
+
+  <h4>1. Student-Faculty Ratio (SFR)</h4>
+  <br>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="<%= url1 %>" alt="graph">
+    </div>
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-body">
+          <p class="lead">
+            No. of Students in UG 2nd Year= UG1 <br>
+            No. of Students in UG 3rd Year= UG2 <br>
+            No. of Students in UG 4th Year= UG3 <br>
+            No. of Students in PG 1st Year= PG1 <br>
+            No. of Students in PG 2nd Year= PG2
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="card my-card">
+        <div class="card-body">
+          <p class="lead">
+            Current Academic Year = CAY <br>
+            Current Academic Year - 1 = CAYm1 <br>
+            Current Academic Year - 2 = CAYm2 <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="<%= url2 %>" alt="graph">
+    </div>
+
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's Current SFR</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round((sfr.u1 + sfr.u2 + sfr.u3 + sfr.p1 + sfr.p2) / sfr.totalFacultyCAY) %> : 1
+          </h2>
+        </div>
+      </div>
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's SFR (CAYm1)</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round(sfr.totalStudentsCAYm1 / sfr.totalFacultyCAYm1) %> : 1
+          </h2>
+        </div>
+      </div>
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's SFR (CAYm2)</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round(sfr.totalStudentsCAYm2 / sfr.totalFacultyCAYm2) %> : 1
+          </h2>
+        </div>
+      </div>
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Average SFR</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text avg">
+            <%= Math.round((((sfr.u1 + sfr.u2 + sfr.u3 + sfr.p1 + sfr.p2) / sfr.totalFacultyCAY) +
+              (sfr.totalStudentsCAYm1 / sfr.totalFacultyCAYm1) + (sfr.totalStudentsCAYm2 / sfr.totalFacultyCAYm2)) / 3)
+              %> : 1
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col">
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>NBA's Marking Scheme</h5>
+        </div>
+        <div class="card-body">
+          <p class="lead">
+            Marks to be given proportionally from a maximum of 20 to a minimum of 10 for average SFR between
+            15:1 to 25:1,<br> and zero for average SFR higher than 25:1. Marks distribution is given as below:<br>
+            <=15 - 20 Marks <br>
+              <=17 - 18 Marks <br>
+                <=19 - 16 Marks <br>
+                  <=21 - 14 Marks <br>
+                    <=23 - 12 Marks <br>
+                      <=25 - 10 Marks <br>
+                        > 25.0 - 0 Marks <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <hr>
+  <br>
+
+  <h4>2. Faculty Qualification</h4>
+  <br>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="<%= url3 %>" alt="graph">
+    </div>
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-body">
+          <p class="lead">
+            Current Academic Year = CAY <br>
+            Current Academic Year - 1 = CAYm1 <br>
+            Current Academic Year - 2 = CAYm2 <br>
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="card my-card">
+        <div class="card-body">
+          <p class="lead">
+            no. of regular faculty with Ph.D. = <strong>X</strong> <br>
+            no. of regular faculty with M.Tech. = <strong>Y</strong> <br>
+            no. of regular faculty required to comply 20:1 Faculty Student ratio = <strong>F</strong> <br>
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="card my-card">
+        <div class="card-body">
+          <h5>FQ = 2.0 x [(10X +4Y)/F)]</h5>
+        </div>
+      </div>
+      <br>
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Average FQ</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text avg">
+            <%= Math.round((((fq.FQCAY + fq.FQCAYm1 + fq.FQCAYm2) / 3) + Number.EPSILON) * 100) / 100 %>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's Current FQ</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round((fq.FQCAY + Number.EPSILON) * 100) / 100 %>
+          </h2>
+          <p class="lead">X = <%= fq.phdCAY %>
+          </p>
+          <p class="lead">Y = <%= fq.mtechCAY %>
+          </p>
+          <p class="lead">F = <%= fq.F20CAY %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's FQ (CAYm1)</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round((fq.FQCAYm1 + Number.EPSILON) * 100) / 100 %>
+          </h2>
+          <p class="lead">X = <%= fq.phdCAYm1 %>
+          </p>
+          <p class="lead">Y = <%= fq.mtechCAYm1 %>
+          </p>
+          <p class="lead">F = <%= fq.F20CAYm1 %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-header">
+          <h5>Your Institution's FQ (CAYm2)</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="large-text">
+            <%= Math.round((fq.FQCAYm2 + Number.EPSILON) * 100) / 100 %>
+          </h2>
+          <p class="lead">X = <%= fq.phdCAYm2 %>
+          </p>
+          <p class="lead">Y = <%= fq.mtechCAYm2 %>
+          </p>
+          <p class="lead">F = <%= fq.F20CAYm2 %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <br>
+  <hr>
+  <br>
+
+  <h4>3. Faculty Retention</h4>
+  <br>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src="<%= url4 %>" alt="graph">
+    </div>
+    <div class="col-md-4">
+      <div class="card my-card">
+        <div class="card-body">
+          <p class="lead">
+            Current Academic Year = CAY <br>
+            Current Academic Year - 1 = CAYm1 <br>
+            Current Academic Year - 2 = CAYm2 <br>
+          </p>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+        <img src="<%= url5 %>" alt="graph">
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div>
+    <table class="table table-light table-bordered">
+      <thead>
+        <tr class="table-secondary">
+          <th scope="col">SR. No.</th>
+          <th scope="col">Criteria</th>
+          <th scope="col">Marks</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">01.</th>
+          <td>>= 90% of required Faculty members retained during the period of
+            assessment</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">02.</th>
+          <td>>= 75% of required Faculty members retained during the period of
+            assessment</td>
+          <td>08</td>
+        </tr>
+        <tr>
+          <th scope="row">03.</th>
+          <td>>= 60% of required Faculty members retained during the period of
+            assessment</td>
+          <td>06</td>
+        </tr>
+        <tr>
+          <th scope="row">04.</th>
+          <td>>= 50% of required Faculty members retained during the period of
+            assessment</td>
+          <td>04</td>
+        </tr>
+        <tr>
+          <th scope="row">05.</th>
+          <td>
+            < 50% of required Faculty members retained during the period of assessment</td>
+          <td>00</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <!-- 
+
+  <img
+    src="https://quickchart.io/chart?c={type:'bar',data:{labels:['January','February', 'March','April', 'May'], datasets:[{label:'Dogs',data:[50,60,70,180,190]},{label:'Cats',data:[100,200,300,400,500]}]}}">
+
+  <img
+    src="https://quickchart.io/chart?c={type:'pie',data:{labels:['January','February', 'March','April', 'May'], datasets:[{data:[50,60,70,180,190]}]}}">
+  </div> -->

@@ -1,0 +1,252 @@
+<%- include('partials/header') %>
+
+
+    <div class="container">
+        <br><br>
+        <h1>Institution's Profile</h1>
+        <br>
+        <form class="" action="/registerForm" method="post">
+
+
+            <h4>Institution Information</h4>
+
+            <table class="table">
+
+                <tr>
+                    <td>
+                        <p class="lead">Name of the Institution</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Address of the Institution</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="address" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Name of the Affiliating University</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="university" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Year of establishment of the Institution</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="number" name="estYear" required>
+                    </td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+
+            <!-- <label class="form-label">Name of the Institution <input type="text" name="name" required></label> <br>
+            <label class="form-label">Address of the Institution <input type="text" name="address" required></label>
+            <br>
+            <label class="form-label">Name of the Affiliating University <input type="text" name="university"
+                    required></label>
+            <br>
+            <label class="form-label">Year of establishment of the Institution <input type="number" name="estYear"
+                    required></label> <br> -->
+
+
+            <h4>Type of Institution and Ownership Status</h4>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <p class="lead">Select Your Institution's Type</p>
+                    </td>
+                    <td>
+                        <select name="institutionalType" style="width: 400px;" required>
+                            <option>Select</option>
+                            <option value="Institute of National Importance">Institute of National Importance</option>
+                            <option value="University"> University</option>
+                            <option value="Deemed University"> Deemed University</option>
+                            <option value="Autonomous">Autonomous</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Select Your Institution's Ownership Status</p>
+                    </td>
+                    <td>
+                        <select name="ownershipStatus" style="width: 400px;" required>
+                            <option>Select</option>
+                            <option value="Central Government"> Central Government</option>
+                            <option value="State Government">State Government</option>
+                            <option value="Government aided"> Government aided</option>
+                            <option value="Self-financing"> Self-financing</option>
+                            <option value="Trust">Trust</option>
+                            <option value="Society">Society</option>
+                            <option value="Section 25 Company">Section 25 Company</option>
+                        </select>
+                    </td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+            <!-- 
+            <h4>Type of Institution</h4>
+            <select name="institutionalType">
+                <option value="Institute of National Importance">Institute of National Importance</option>
+                <option value="University"> University</option>
+                <option value="Deemed University"> Deemed University</option>
+                <option value="Autonomous">Autonomous</option>
+
+            </select>
+
+
+            <h4>Ownership Status</h4>
+            <select name="ownershipStatus">
+                <option value="Central Government"> Central Government</option>
+                <option value="State Government">State Government</option>
+                <option value="Government aided"> Government aided</option>
+                <option value="Self-financing"> Self-financing</option>
+                <option value="Trust">Trust</option>
+                <option value="Society">Society</option>
+                <option value="Section 25 Company">Section 25 Company</option>
+            </select> -->
+
+            <h4>Vision and Mission</h4>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <p class="lead">Vision of the Institution</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="vision" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Mission of the Institution</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="mission" required>
+                    </td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+
+            <!-- <h4>Vision</h4>
+            <label class="form-label">Vision of the Institution <input type="text" name="vision" required></label>
+            <br><br>
+
+
+            <h4>Mission</h4>
+            <label class="form-label">Mission of the Institution <input type="text" name="mission" required></label>
+            <br><br> -->
+
+
+            <h4>Head of Institution</h4>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <p class="lead">Name</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="headName" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Email</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="email" name="headEmail" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Contact No.</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="number" name="headContact" required>
+                    </td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+            <h4>NBA Coordinator (if designated)</h4>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <p class="lead">Name</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="text" name="nbaCoordinatorName" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Email</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="email" name="nbaCoordinatorEmail" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="lead">Contact No.</p>
+                    </td>
+                    <td>
+                        <input class="text-field" type="number" name="nbaCoordinatorContact" required>
+                    </td>
+                </tr>
+
+            </table>
+
+
+
+
+            <!-- <h4>Head of Institution</h4>
+            <label class="form-label">Name <input type="text" name="headName" required></label> <br>
+            <label class="form-label">Email <input type="email" name="headEmail" required></label> <br>
+            <label class="form-label">Contact No. <input type="number" name="headContact" required></label> <br>
+
+
+            <h4>NBA Coordinator (if designated)</h4>
+            <label class="form-label">Name <input type="text" name="nbaCoordinatorName" required></label> <br>
+            <label class="form-label">Email <input type="email" name="nbaCoordinatorEmail" required></label> <br>
+            <label class="form-label">Contact No. <input type="number" name="nbaCoordinatorContact" required></label> -->
+
+
+            <br>
+            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+            <br><br>
+        </form>
+
+    </div>
+
+    <%- include('partials/footer') %>

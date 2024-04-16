@@ -1,0 +1,124 @@
+<% layout('partials/userProfile') %>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Student-Faculty Ratio
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div class=" col-md-9 col-lg-9 ">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>No. of UG Programs in the Department (n) </td>
+                                            <td>
+                                                <%=sfrInfo[0].UGPrograms%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>No. of PG Programs in the Department (m) </td>
+                                            <td>
+                                                <%=sfrInfo[0].PGPrograms%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>No. of Students in UG 2nd Year </td>
+                                            <td>
+                                                <%=sfrInfo[0].u1%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>No. of Students in UG 3rd Year </td>
+                                            <td>
+                                                <%=sfrInfo[0].u2%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>No. of Students in UG 4th Year </td>
+                                            <td>
+                                                <%=sfrInfo[0].u3%>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>No. of Students in PG 1st Year </td>
+                                            <td>
+                                                <%=sfrInfo[0].p1%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>No. of Students in PG 2nd Year </td>
+                                            <td>
+                                                <%=sfrInfo[0].p2%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Total Number of Faculty Members (excluding first yearfaculty) </td>
+                                            <td>
+                                                <%=sfrInfo[0].totalFacultyCAY%>
+                                            </td>
+                                        </tr>
+
+                                        <br>
+
+                                        <tr>
+                                            <td>Total Students (Current Academic Year - 1) </td>
+                                            <td>
+                                                <%=sfrInfo[0].totalStudentsCAYm1%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Total Faculty (Current Academic Year - 1) </td>
+                                            <td>
+                                                <%=sfrInfo[0].totalFacultyCAYm1%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Total Students (Current Academic Year - 2) </td>
+                                            <td>
+                                                <%=sfrInfo[0].totalStudentsCAYm2%>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Total Faculty (Current Academic Year - 2) </td>
+                                            <td>
+                                                <%=sfrInfo[0].totalFacultyCAYm2%>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+
+                                <a href="/sfredit" class="btn btn-primary">Edit Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>

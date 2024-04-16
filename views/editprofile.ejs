@@ -1,0 +1,302 @@
+<% layout('partials/userProfile') %>
+
+
+  <div class="container">
+    <br>
+    <h1>Institution's Profile</h1>
+    <br>
+    <form class="" action="/editprofile?_method=PUT" method="post">
+
+
+      <h4>Institution Information</h4>
+
+      <table class="table">
+
+        <tr>
+          <td>
+            <p class="lead">Name of the Institution</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="name" value="<%=institutionalInfo[0].name%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Address of the Institution</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="address" value="<%=institutionalInfo[0].address%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Name of the Affiliating University</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="university" value="<%=institutionalInfo[0].university%>"
+              required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Year of establishment of the Institution</p>
+          </td>
+          <td>
+            <input class="text-field" type="number" name="estYear" value="<%=institutionalInfo[0].estYear%>" required>
+          </td>
+        </tr>
+
+      </table>
+
+      <hr>
+
+      <h4>Type of Institution and Ownership Status</h4>
+
+      <table class="table">
+        <tr>
+          <td>
+            <p class="lead">Select Your Institution's Type</p>
+          </td>
+          <td>
+            <select name="institutionalType" style="width: 400px;" required>
+              <option value="<%=institutionalInfo[0].institutionalType%>">
+                <%=institutionalInfo[0].institutionalType%>
+              </option>
+              <option value="Institute of National Importance">Institute of National Importance</option>
+              <option value="University"> University</option>
+              <option value="Deemed University"> Deemed University</option>
+              <option value="Autonomous">Autonomous</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Select Your Institution's Ownership Status</p>
+          </td>
+          <td>
+            <select name="ownershipStatus" style="width: 400px;" required>
+              <option value="<%=institutionalInfo[0].ownershipStatus%>">
+                <%=institutionalInfo[0].ownershipStatus%>
+              </option>
+              <option value="Central Government"> Central Government</option>
+              <option value="State Government">State Government</option>
+              <option value="Government aided"> Government aided</option>
+              <option value="Self-financing"> Self-financing</option>
+              <option value="Trust">Trust</option>
+              <option value="Society">Society</option>
+              <option value="Section 25 Company">Section 25 Company</option>
+            </select>
+          </td>
+        </tr>
+
+      </table>
+
+      <hr>
+
+      <h4>Vision and Mission</h4>
+
+      <table class="table">
+        <tr>
+          <td>
+            <p class="lead">Vision of the Institution</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="vision" value="<%=institutionalInfo[0].vision%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Mission of the Institution</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="mission" value="<%=institutionalInfo[0].mission%>" required>
+          </td>
+        </tr>
+
+      </table>
+
+      <hr>
+
+      <h4>Head of Institution</h4>
+
+      <table class="table">
+        <tr>
+          <td>
+            <p class="lead">Name</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="headName" value="<%=institutionalInfo[0].headName%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Email</p>
+          </td>
+          <td>
+            <input class="text-field" type="email" name="headEmail" value="<%=institutionalInfo[0].headEmail%>"
+              required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Contact No.</p>
+          </td>
+          <td>
+            <input class="text-field" type="number" name="headContact" value="<%=institutionalInfo[0].headContact%>"
+              required>
+          </td>
+        </tr>
+
+      </table>
+
+      <hr>
+
+      <h4>NBA Coordinator (if designated)</h4>
+
+      <table class="table">
+        <tr>
+          <td>
+            <p class="lead">Name</p>
+          </td>
+          <td>
+            <input class="text-field" type="text" name="nbaCoordinatorName"
+              value="<%=institutionalInfo[0].nbaCoordinatorName%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Email</p>
+          </td>
+          <td>
+            <input class="text-field" type="email" name="nbaCoordinatorEmail"
+              value="<%=institutionalInfo[0].nbaCoordinatorEmail%>" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="lead">Contact No.</p>
+          </td>
+          <td>
+            <input class="text-field" type="number" name="nbaCoordinatorContact"
+              value="<%=institutionalInfo[0].nbaCoordinatorContact%>" required>
+          </td>
+        </tr>
+
+      </table>
+
+      <br>
+      <button type="submit" class="btn btn-primary">Update Profile</button>
+      <br>
+    </form>
+
+  </div>
+
+
+  <!-- <div class="jumbotron centered">
+    <div class="container">
+
+      <h1>Institutional Information</h1>
+
+      <form class="" action="/editprofile?_method=PUT" method="post">
+
+
+        <h4>Institution Information</h4>
+
+        <label class="form-label">Name of the Institution <input type="text" name="name"
+            value="<%=institutionalInfo[0].name%>" required></label>
+        <br>
+        <label class="form-label">Address of the Institution <input type="text" name="address"
+            value="<%=institutionalInfo[0].address%>" required></label>
+        <br>
+        <label class="form-label">Name of the Affiliating University <input type="text" name="university"
+            value="<%=institutionalInfo[0].university%>" required></label>
+        <br>
+        <label class="form-label">Year of establishment of the Institution <input type="number" name="estYear"
+            value="<%=institutionalInfo[0].estYear%>" required></label>
+        <br>
+
+
+
+        <h4>Type of Institution</h4>
+
+        <select name="institutionalType">
+          <option value="<%=institutionalInfo[0].institutionalType%>">
+            <%=institutionalInfo[0].institutionalType%>
+          </option>
+          <option value="Institute of National Importance">Institute of National Importance</option>
+          <option value="University"> University</option>
+          <option value="Deemed University"> Deemed University</option>
+          <option value="Autonomous">Autonomous</option>
+
+        </select>
+
+
+        <h4>Ownership Status</h4>
+        <select name="ownershipStatus">
+          <option value="<%=institutionalInfo[0].ownershipStatus%>">
+            <%=institutionalInfo[0].ownershipStatus%>
+          </option>
+          <option value="Central Government"> Central Government</option>
+          <option value="State Government">State Government</option>
+          <option value="Government aided"> Government aided</option>
+          <option value="Self-financing"> Self-financing</option>
+          <option value="Trust">Trust</option>
+          <option value="Society">Society</option>
+          <option value="Section 25 Company">Section 25 Company</option>
+        </select>
+
+        <hr>
+
+        <h4>Vision</h4>
+        <label class="form-label">Vision of the Institution <input type="text" name="vision"
+            value="<%=institutionalInfo[0].vision%>" required></label>
+        <br><br>
+
+
+        <h4>Mission</h4>
+        <label class="form-label">Mission of the Institution <input type="text" name="mission"
+            value="<%=institutionalInfo[0].mission%>" required></label>
+        <br><br>
+
+        <hr>
+
+        <h4>Head of Institution</h4>
+        <label class="form-label">Name <input type="text" name="headName" value="<%=institutionalInfo[0].headName%>"
+            required></label>
+        <br>
+        <label class="form-label">Email <input type="email" name="headEmail" value="<%=institutionalInfo[0].headEmail%>"
+            required></label>
+        <br>
+        <label class="form-label">Contact No. <input type="number" name="headContact"
+            value="<%=institutionalInfo[0].headContact%>" required></label>
+        <br>
+
+
+        <h4>NBA Coordinator (if designated)</h4>
+        <label class="form-label">Name <input type="text" name="nbaCoordinatorName"
+            value="<%=institutionalInfo[0].nbaCoordinatorName%>" required></label>
+        <br>
+        <label class="form-label">Email <input type="email" name="nbaCoordinatorEmail"
+            value="<%=institutionalInfo[0].nbaCoordinatorEmail%>" required></label>
+        <br>
+        <label class="form-label">Contact No. <input type="number" name="nbaCoordinatorContact"
+            value="<%=institutionalInfo[0].nbaCoordinatorContact%>" required></label>
+        <br><br>
+
+
+
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+        <br>
+      </form>
+
+    </div>
+  </div> -->

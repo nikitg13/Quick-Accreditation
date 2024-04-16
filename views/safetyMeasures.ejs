@@ -1,0 +1,50 @@
+<% layout('partials/userProfile') %>
+
+  <h2>Laboratory - Safety Measures</h2>
+  <br>
+
+  <form class="" action="/safetyform" method="post">
+
+    <label class="form-label">
+      <p class="lead">Laboratory Name </p><input class="text-field" type="text" name="name" required>
+    </label>
+    <br>
+    <div class="mb-3 ">
+      <label for="safetyMeasure" class="form-label">
+        <p class="lead">Safety Measures </p>
+      </label>
+      <textarea class="form-control" id="safetyMeasure" type="text" name="safetyMeasure"
+        style="width: 600px; height: 100px; border:solid 1px rgb(105, 105, 105);" required></textarea>
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+  </form>
+
+  <br><br>
+
+  <table class="table table-light table-bordered">
+    <thead>
+      <tr class="table-secondary">
+        <th scope="col">Name</th>
+        <th scope="col">Safety Measures</th>
+
+      </tr>
+    </thead>
+    <% for(let SafetyMeasure of user.safetyMeasures){%>
+      <tbody>
+        <tr>
+
+          <td>
+            <%= SafetyMeasure.name %>
+          </td>
+          <td>
+            <%= SafetyMeasure.safetyMeasure%>
+          </td>
+
+        </tr>
+
+      </tbody>
+      <%}%>
+  </table>

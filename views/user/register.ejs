@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+    <%- include('../partials/header') %>
+
+        <div class="container mt-5">
+            <%- include('../partials/flash') %>
+        </div>
+        <div class="container mt-5"></div>
+
+        <h1>Register</h1>
+        <h5 class="lead">Register as the institution.</h5>
+        <h5 class="lead">Assign NBA coordinator of your institution to handle your account</h5>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="card shadow">
+                    <img src="https://www.admissioninbangalore.in/wp-content/uploads/2019/03/highcompress-National-Board-Of-Accreditation-og-1024x538.jpg"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+
+                        <!-- Makes POST request to /register route -->
+                        <form action="/register" method="POST">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" name="username">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password">
+                            </div>
+                            <!-- 
+              <div class="form-group">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" class="form-control" name="cpassword">
+              </div> -->
+
+                            <button type="submit" class="btn btn-dark">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+        </div>
+        </div>
+
+        <%- include('../partials/header') %>

@@ -1,0 +1,23 @@
+body {
+  background-color: #e8ecef;
+}
+
+.centered {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.text-field {
+  width: 600px;
+}
+
+.number-field {
+  width: 300px;
+}
